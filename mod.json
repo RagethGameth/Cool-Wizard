@@ -1,0 +1,92 @@
+{
+    // The ID of your project. Should be unique!!
+    "id": "cool_wizard",
+    // Displays on the main menu.
+    "name": "cool_wizard",
+    // Displays underneath the name. Optional.
+    "subtitle": "",
+
+    // The version of your project.
+    "version": "v1.0.0",
+    // What version of the engine your project was made with.
+    "engineVer": "v0.11.0-dev",
+
+    // The Deltarune chapter you'd like to base your project off of.
+    // Do keep in mind that you can control chapter-specific features
+    // one by one using the config below.
+    "chapter": 5,
+
+    // The map that you start in when first starting the project.
+    "map": "room1",
+
+    // The party. The first character is the player.
+    "party": ["kris", "susie", "noelle"],
+
+    // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
+    "darkInventory": {
+        "items": ["glowshard", "darkburger", "syringe"],
+        "key_items": ["cell_phone", "shadowcrystal"]
+    },
+
+    // Equipment for your party. Not specifying equipment defaults to the following.
+    "equipment": {
+        "kris": {
+            "weapon": "wood_blade",
+            "armor": ["amber_card", "amber_card"]
+        },
+        "susie": {
+            "weapon": "mane_ax",
+            "armor": ["amber_card", "amber_card"]
+        },
+        "ralsei": {
+            "weapon": "red_scarf",
+            "armor": ["amber_card", "amber_card"]
+        }
+    },
+
+    // Should never be true, but just in case. Restarts the entire engine when leaving the project.
+    // If you need this, you're most likely doing something wrong.
+    "hardReset": false,
+
+    // Whether the project is hidden from the project selection.
+    "hidden": false,
+
+    // Whether the game window's title should be set to the project's name, and the icon to the image
+    // in the file `window_icon.png`.
+    // When your project is configured as the engine's target project, it's automatically done unless if
+    // this option is explicitly set to false; else, it's done if this is set to true.
+    "setWindowTitleAndIcon": null,
+
+    // Config values for the engine and any libraries you may have.
+    // These config values can control chapter-specific features as well.
+    "config": {
+        "kristal": {
+            // The amount of storage slots in the dark world inventory
+            "storageSlots": 36,
+            // Enable recruit messages and menu
+            "enableRecruits": true,
+            // Whether the recruits progress in the menu will have spaces between the amounts
+            "recruitsProgressSpaces": true,
+            // Single-file save menu with no storage/recruits options
+            "smallSaveMenu": false,
+            // Seeing +X when an enemy's mercy goes up
+            "mercyMessages": true,
+            // Whether the mercy bar should appear or not
+            "mercyBar": true,
+            // Whether the HP and Mercy bars should show percentages
+            "enemyBarPercentages": true,
+            // Whether TIRED enemy names and pacifying spells should flash white
+            "pacifyGlow": true,
+            // Whether a TIRED message should appear when an enemy becomes TIRED
+            "tiredMessages": true,
+            // Whether the "Check" act in battle says "Useless analysis" or not
+            "checkActDescription": false,
+            // Whether TP should be kept after battle instead of reset
+            "keepTensionAfterBattle": false,
+            // End of config
+        }
+    },
+
+    // Whether or not to enable dev mode. Dev mode enables debug keys and the console.
+    "dev": true
+}
