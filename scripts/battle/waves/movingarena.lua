@@ -28,6 +28,7 @@ function MovingArena:onStart()
     -- Store starting arena position
     self.arena_start_x = arena.x
     self.arena_start_y = arena.y
+
 end
 
 function MovingArena:update()
