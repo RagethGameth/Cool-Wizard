@@ -12,18 +12,18 @@ function MovingArena:onStart()
     local arena = Game.battle.arena
 
     -- Spawn spikes on top of arena
-    self:spawnBulletTo(Game.battle.arena, "arenahazard", arena.width / 2, 0, math.rad(0))
+    self:spawnBulletTo(arena, "arenahazard", arena.width / 2, 0, math.rad(0))
 
     -- Spawn spikes on bottom of arena (rotated 180 degrees)
-    self:spawnBulletTo(Game.battle.arena, "arenahazard", arena.width / 2, arena.height, math.rad(180))
+    self:spawnBulletTo(arena, "arenahazard", arena.width / 2, arena.height, math.rad(180))
 
-    self:spawnBulletTo(Game.battle.arena, "arenahazard", arena.width / arena.width - 1, arena.height / 2, math.rad(270))
+    self:spawnBulletTo(arena, "arenahazard", arena.width / arena.width - 1, arena.height / 2, math.rad(270))
 
-    self:spawnBulletTo(Game.battle.arena, "arenahazard", arena.width / 1, arena.height / 2, math.rad(90))
+    self:spawnBulletTo(arena, "arenahazard", arena.width / 1, arena.height / 2, math.rad(90))
 
-    self:spawnBulletTo(Game.battle.arena, "arenahazardsmall", arena.width / 4 + 1, arena.height / 3, math.rad(0))
+    self:spawnBulletTo(arena, "arenahazardsmall", arena.width / 4 + 1, arena.height / 3, math.rad(0))
 
-    self:spawnBulletTo(Game.battle.arena, "arenahazardsmall", arena.width / 4 * 3, arena.height / 3 * 2, math.rad(0))
+    self:spawnBulletTo(arena, "arenahazardsmall", arena.width / 4 * 3, arena.height / 3 * 2, math.rad(0))
 
     -- Store starting arena position
     self.arena_start_x = arena.x

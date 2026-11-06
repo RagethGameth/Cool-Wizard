@@ -126,7 +126,7 @@ function Dummy:selectWave()
     if self.health > self.max_health * 2/3 then -- with 2/3rds or less HP left
 
         if turn == 1 then
-            self.selected_wave = "movingarena"
+            self.selected_wave = "WizardHat"
         elseif turn == 2 then
             self.selected_wave = "basic"
         elseif turn == 3 then
