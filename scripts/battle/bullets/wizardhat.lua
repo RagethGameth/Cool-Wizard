@@ -17,14 +17,27 @@ function WizardHat:init(x, y, rot)
     -- Rotation of the bullet (in radians)
     self.rotation = rot
 
+
+
     -- Don't destroy this bullet when it damages the player
     self.destroy_on_hit = false
 end
+
+-- function WizardHat:init(x, y, dir, speed)
+--     -- Last argument = sprite path
+--     super.init(self, x, y, "bullets/WizardHat")
+
+--     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
+--     self.physics.direction = dir
+--     -- Speed the bullet moves (pixels per frame at 30FPS)
+--     self.physics.speed = speed
+-- end
 
 function WizardHat:update()
     -- For more complicated bullet behaviours, code here gets called every update
 
     super.update(self)
+    self.x = Game.battle.arena.width / 2 + 100 * math.sin(Kristal.getTime() * 2)
 end
 
 return WizardHat
