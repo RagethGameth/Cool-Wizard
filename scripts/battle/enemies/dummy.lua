@@ -128,7 +128,7 @@ function Dummy:selectWave()
         if turn == 1 then
             self.selected_wave = "WizardHat"
         elseif turn == 2 then
-            self.selected_wave = "basic"
+            self.selected_wave = "WizardHat"
         elseif turn == 3 then
             self.selected_wave = "aiming"
         elseif turn == 0 then

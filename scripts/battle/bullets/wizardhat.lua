@@ -9,7 +9,7 @@ function WizardHat:init(x, y, rot)
     super.init(self, x, y, "bullets/WizardHat")
 
     -- Top-center origin point (will be rotated around it)
-    self:setOrigin(0.5, 0)
+    self:setOrigin(0.5, 1)
 
     -- The hitbox where the player will be damaged by the bullet (affected by scale and rotation)
     self:setHitbox(0, 0, self.width, 6)
